@@ -1,0 +1,42 @@
+{
+  "manifest_version":3,
+  "name":"cursor",
+  "version": "0.1",
+  "description":"cursor extention",
+  "icons":{
+    "16":"img.png",
+    "48":"img.png",
+    "128":"img.png"
+  },
+
+
+  "action":{
+        "default_popup":"popup.html"
+  },
+
+  "permissions":["activeTab",
+                  "storage"
+  ],
+
+  "host_permissions":["https://www.youtube.com/*"],
+  
+  "content_scripts":[{
+                    "matches":["https://www.youtube.com/*"],
+                    "js":["content.js"]
+  }],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+                    "images/cursor_1.png",
+                    "images/cursor_2.png",
+                    "images/cursor_3.png",
+                    "images/cursor_4.png",
+                    "images/cursor_5.png",
+                    "images/cursor_6.png",
+                    "images/cursor_7.png"
+                  ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
